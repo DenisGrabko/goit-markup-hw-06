@@ -437,13 +437,53 @@
       </div>
     </footer>
 
-    <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop" data-modal>
       <div class="backdrop-modal-window">
-        <button type="button" class="backdrop-modal-close-btn" data-modal-close>
-          <svg class="backdrop-close-btn-svg" width="8" height="8">
-            <use href="./images/icons.svg#icon-Vector-cross"></use>
-          </svg>
-        </button>
+        <form class="backdrop-modal-form">
+          <button
+            type="button"
+            class="backdrop-modal-close-btn"
+            data-modal-close
+          >
+            <svg class="backdrop-close-btn-svg" width="8" height="8">
+              <use href="./images/icons.svg#icon-Vector-cross"></use>
+            </svg>
+          </button>
+          <p class="backdrop-modal-text-about">
+            Leave your contacts and we will call you back
+          </p>
+
+          <fieldset class="backdrop-modal-fieldset">
+            <legend>
+              <label class="backdrop-fieldset-label">
+                <p class="backdrop-modal-fieldset-placeholder-text">Name</p>
+                <input type="text" class="backdrop-fieldset-input" />
+              </label>
+              <label class="backdrop-fieldset-label">
+                <p class="backdrop-modal-fieldset-placeholder-text">Phone</p>
+                <input type="text" class="backdrop-fieldset-input" />
+              </label>
+              <label class="backdrop-fieldset-label">
+                <p class="backdrop-modal-fieldset-placeholder-text">Email</p>
+                <input type="text" class="backdrop-fieldset-input" />
+              </label>
+              <label>
+                <p class="backdrop-modal-fieldset-placeholder-text">Commet</p>
+                <textarea
+                  type="text"
+                  class="backdrop-modal-textarea"
+                ></textarea>
+              </label>
+            </legend>
+          </fieldset>
+          <label class="backdrop-privacy-policy">
+            <input type="checkbox" class="backdrop-checkbox-privacy-policy" />
+            <p class="backdrop-privacy-policy-text">
+              I accept the terms and conditions of the Privacy Policy
+            </p>
+          </label>
+          <button type="button" class="backdrop-modal-btn">Send</button>
+        </form>
       </div>
     </div>
 
