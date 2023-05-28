@@ -933,6 +933,7 @@ ol {
     position: fixed;    
     top: 0; 
     left: 0;
+    padding: 72px 24px 24px 24px;
     width: 100%;
     height: 100%;
     background-color: rgba(46, 47, 66, 0.4);
@@ -949,7 +950,7 @@ ol {
 .backdrop-modal-window {
     position: absolute;    
     top: 50%;
-    left: 50%;
+    left: 50%;    
     width: 408px;
     min-height: 584px;
     background:#fcfcfc;
@@ -961,12 +962,6 @@ ol {
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.backdrop-modal-form {
-    position: relative;
-    width: 100%;
-    height: 100%;    
-}
-
 .backdrop-modal-close-btn {
     position: absolute;
     top: 24px;
@@ -975,14 +970,14 @@ ol {
     height: 24px;
     display: flex;
     justify-content: center;
-    align-items: center;       
-    padding: 0;   
-    background-color: #E7E9FC;    
+    align-items: center;
+    padding: 0;
+    background-color: #E7E9FC;
     border: solid 1px rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     cursor: pointer;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
-                border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop-close-btn-svg {
@@ -1002,48 +997,40 @@ ol {
     top: 72px;
     margin: 0;
     margin-left: 24px;
-    margin-right: 24px;    
+    margin-right: 24px;
+    margin-bottom: 16px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    text-align: center;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
-    line-height: 24px;        
+    line-height: 24px;
     text-align: center;
-    letter-spacing: 0.02em;    
+    letter-spacing: 0.02em;
     color: #2E2F42;
-    
 }
 
-.backdrop-modal-fieldset {
-    position: absolute;    
-    top: 112px;
-    padding: 0;
-    margin-right: 24px;
-    margin-left: 24px;
-    width: 360px;
-    height: 336px;
-    border: none;
+.backdrop-modal-form {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;    
+}
+
+.backdrop-modal-form-container-name-phone-email {
+    margin-bottom: 8px;
 }
 
 .backdrop-fieldset-label {
     display: block;
-    width: 100%;
-    height: 58px;
-    margin-bottom: 8px;    
-}
-
-
-.backdrop-modal-fieldset-placeholder-text {
-    margin: 0;
-    padding-bottom: 4px;
+    margin-bottom: 4px;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
-    line-height: 14px;    
+    line-height: 1.17;
     letter-spacing: 0.04em;    
     color: #8E8F99;
 }
@@ -1051,9 +1038,7 @@ ol {
 
 .backdrop-div-container-svg{
     position: relative;
-    width: 100%;
-    height: 40px;
-    fill: #2E2F42;    
+    width: 360px;     
 }
 
 .backdrop-fieldset-input {
@@ -1062,42 +1047,48 @@ ol {
     padding-left: 38px;
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    outline: none;
+    border-color: transparent;
+    outline: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);    
 }
-
 
 .backdrop-icons-svg {
-    position: absolute;
-    top: 8px;
+    position: absolute;    
     left: 16px;
-    width: 18px;
-    height: 24px;       
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    top: 50%;    
+    transform: translateY(-50%);          
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);    
 }
 
-.backdrop-fieldset-input:hover,
 .backdrop-fieldset-input:focus {
-    border-color: #4D5AE5;    
+    border-color: #4D5AE5;
+    
 }
-.backdrop-div-container-svg:hover,
-.backdrop-div-container-svg:focus {   
-    fill: #4D5AE5;      
+.backdrop-fieldset-input:focus + .backdrop-icons-svg {
+    fill: #4D5AE5;
 }
 
+.backdrop-modal-form-container-comment {
+    margin-bottom: 16px;
+}
 
 .backdrop-modal-textarea {
     position: relative;
-    width: 360px;
+    width: 100%;
     height: 120px;
-    resize: none;
-    border: 1px solid rgba(46, 47, 66, 0.4);
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: rgba(46, 47, 66, 0.4);     
+    border: 1px solid rgba(46, 47, 66, 0.2);
     border-radius: 4px;
-    outline: none;
+    background-color: transparent;
+    padding: 8px 16px;
+    outline: transparent;
+    resize: none;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.backdrop-modal-textarea:hover,
 .backdrop-modal-textarea:focus {
     border-color: #4D5AE5;
 }
@@ -1115,34 +1106,44 @@ ol {
     color: rgba(46, 47, 66, 0.4);
 }
 
-.backdrop-privacy-policy {
-    position: absolute;
-    top: 464px;
-    left: 24px;
-    width: 360px;
-    height: 16px;
-    display: flex;
-    direction: row;
-    justify-content: center;
-    align-items: center;     
+.backdrop-privacy-policy-container {    
+    margin-bottom: 24px;
 }
 
-.backdrop-checkbox-privacy-policy{
+.visually-hidden {    
     appearance: none;
     position: absolute;
 }
 
-.backdrop-privacy-policy-text {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;   
+.backdrop-privacy-policy {
+    position: absolute; 
+    display: flex;
+    direction: row;
+    justify-content: center;
+    align-items: center; 
+    top: 464px;
+    left: 24px;
+    width: 360px;
+    height: 16px;
     font-size: 12px;
-    line-height: 14px;       
-    letter-spacing: 0.04em;    
-    color: #8E8F99;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #8e8f99;       
 }
 
-.privacy-policy {
+.privacy-policy-link {
+    color: #4d5ae5;
+}
+
+.privacy-policy-span-underline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    fill: transparent;
+    width: 16px;
+    height: 16px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 2px;
     text-decoration: underline;
     color: #4D5AE5;
 }
@@ -1157,6 +1158,15 @@ ol {
     border-radius: 2px;    
 }
 
+.backdrop-checkbox-privacy-policy:checked + .privacy-policy-span-underline {
+    background-color: #404bbf;
+    border: none;
+    fill: #ffffff;
+    border-color: #404bbf;
+}
+
+
+/*
 .backdrop-privacy-policy-custom-checkbox-icon {    
        opacity: 0;
 }
@@ -1164,20 +1174,29 @@ ol {
 .backdrop-checkbox-privacy-policy:checked + .backdrop-privacy-policy-custom-checkbox  .backdrop-privacy-policy-custom-checkbox-icon {    
     opacity: 1;     
 }
-
+*/
 .backdrop-modal-btn {
     position: absolute;
-    width: 169px;
+    display: block;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;        
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    letter-spacing: 0.04em;    
+    color: #FFFFFF;
+    min-width: 169px;
     height: 56px;
     top: 504px;
     left: 119px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    color: #FFFFFF;
+    cursor: pointer;    
     background: #4D5AE5;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border: rgb(0, 0, 0);
     border-radius: 4px;    
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
