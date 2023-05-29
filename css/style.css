@@ -1132,6 +1132,9 @@ ol {
 }
 
 .backdrop-privacy-policy-custom-chekbox-container {
+    position: absolute;
+    top: 0px;
+    left: 0px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -1154,7 +1157,7 @@ ol {
     border-radius: 2px;    
 }
 
-.backdrop-checkbox-privacy-policy:checked + .backdrop-privacy-policy-custom-chekbox-container {
+.backdrop-checkbox-privacy-policy:checked + .backdrop-privacy-policy >.backdrop-privacy-policy-custom-chekbox-container {
     background-color: #404bbf;
     border: none;
     fill: #ffffff;
@@ -1165,18 +1168,18 @@ ol {
     color: #4d5ae5;
 }
 
-/*
+
 .backdrop-privacy-policy-custom-checkbox-icon {    
-       opacity: 0;
+    opacity: 0;
 }
 
-.backdrop-checkbox-privacy-policy:checked + .backdrop-privacy-policy-custom-checkbox  .backdrop-privacy-policy-custom-checkbox-icon {    
+.backdrop-checkbox-privacy-policy:checked + .backdrop-privacy-policy > .backdrop-privacy-policy-custom-chekbox-container > .backdrop-privacy-policy-custom-checkbox .backdrop-privacy-policy-custom-checkbox-icon {    
     opacity: 1;     
 }
-*/
-.backdrop-modal-btn {
-    position: absolute;
+
+.backdrop-modal-btn{
     display: block;
+    position: absolute;    
     font-family: "Roboto", sans-serif;
     font-style: normal;
     font-weight: 500;
