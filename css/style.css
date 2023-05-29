@@ -1138,6 +1138,11 @@ ol {
     justify-content: center;
     fill: transparent; 
 }
+.backdrop-privacy-policy-custom-checkbox-container-for-positioning {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
 
 .backdrop-privacy-policy-custom-checkbox {
     position: absolute;
