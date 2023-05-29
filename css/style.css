@@ -1116,10 +1116,7 @@ ol {
 }
 
 .backdrop-privacy-policy {
-    position: absolute;     
-    direction: row;
-    justify-content: center;
-    align-items: center; 
+    position: absolute;          
     top: 464px;
     left: 24px;
     width: 360px;
@@ -1130,20 +1127,15 @@ ol {
     color: #8e8f99;       
 }
 
-.backdrop-privacy-policy-custom-chekbox-container {
-    display: inline-flex;
-    position: absolute;
-    top: 0px;
-    left: 0px;    
+.backdrop-privacy-policy-custom-checkbox-container {
+    display: inline-flex;     
     align-items: center;
     justify-content: center;
-    fill: transparent;
+    position: absolute;   
+    top: 0px;
+    left: 0px;
     width: 16px;
-    height: 16px;    
-    border: 1px solid rgba(46, 47, 66, 0.4);
-    border-radius: 2px;
-    text-decoration: underline;
-    color: #4D5AE5;
+    height: 16px;
 }
 
 .backdrop-privacy-policy-custom-checkbox {
@@ -1151,11 +1143,13 @@ ol {
     top: 0px;
     left: 0px;
     width: 16px;
-    height: 16px;    
+    height: 16px;
+    fill: transparent;   
+    border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 2px;    
 }
 
-.backdrop-checkbox-privacy-policy:checked + .backdrop-privacy-policy >.backdrop-privacy-policy-custom-chekbox-container {
+.backdrop-checkbox-privacy-policy:checked + .backdrop-privacy-policy >.backdrop-privacy-policy-custom-checkbox-container {
     background-color: #404bbf;
     border: none;
     fill: #ffffff;
@@ -1163,6 +1157,7 @@ ol {
 }
 
 .privacy-policy-link {
+    text-decoration: underline;
     color: #4d5ae5;
 }
 
@@ -1171,7 +1166,7 @@ ol {
     opacity: 0;
 }
 
-.backdrop-checkbox-privacy-policy:checked + .backdrop-privacy-policy > .backdrop-privacy-policy-custom-chekbox-container > .backdrop-privacy-policy-custom-checkbox .backdrop-privacy-policy-custom-checkbox-icon {    
+.backdrop-checkbox-privacy-policy:checked + .backdrop-privacy-policy > .backdrop-privacy-policy-custom-checkbox-container > .backdrop-privacy-policy-custom-checkbox .backdrop-privacy-policy-custom-checkbox-icon {    
     opacity: 1;     
 }
 
