@@ -1127,15 +1127,18 @@ ol {
     color: #8e8f99;       
 }
 
-.backdrop-privacy-policy-custom-checkbox-container {
-    display: inline-flex;     
-    align-items: center;
-    justify-content: center;
-    position: absolute;   
+.backdrop-privacy-policy-custom-checkbox-container { 
+    position: absolute;       
     top: 0px;
     left: 0px;
     width: 16px;
     height: 16px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 2px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    fill: transparent; 
 }
 
 .backdrop-privacy-policy-custom-checkbox {
@@ -1143,10 +1146,8 @@ ol {
     top: 0px;
     left: 0px;
     width: 16px;
-    height: 16px;
-    fill: transparent;   
-    border: 1px solid rgba(46, 47, 66, 0.4);
-    border-radius: 2px;    
+    height: 16px;     
+        
 }
 
 .backdrop-checkbox-privacy-policy:checked + .backdrop-privacy-policy >.backdrop-privacy-policy-custom-checkbox-container {
