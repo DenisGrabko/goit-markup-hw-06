@@ -435,28 +435,29 @@
           </ul>
         </div>
         <div class="footer-container-email-input">
-          <span class="footer-email-input-description-of-input">Subscribe</span>
-          <label class="footer-email-input-label">
-            <input
-              type="email"
-              class="footer-email-input-field"
-              placeholder="E-mail"
-              requered
-            />
-          </label>
-          <div class="footer-email-input-button-container">
+          <p class="footer-email-input-description-of-input">Subscribe</p>
+          <form class="footer-container-for-label">
+            <label class="footer-email-input-label">
+              <input
+                type="email"
+                name="email-footer"
+                class="footer-email-input-field"
+                placeholder="E-mail"
+                requered
+              />
+            </label>
             <button type="button" class="footer-email-input-button">
-              <p class="footer-email-input-description-of-button">Subscribe</p>
-              <svg width="24" height="24">
+              Subscribe
+              <svg class="footer-button-svg-icon" width="24" height="24">
                 <use href="./images/icons.svg#icon-icon-send"></use>
               </svg>
             </button>
-          </div>
+          </form>
         </div>
       </div>
     </footer>
 
-    <div class="backdrop" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="backdrop-modal-window">
         <button type="button" class="backdrop-modal-close-btn" data-modal-close>
           <svg class="backdrop-close-btn-svg" width="8" height="8">
@@ -469,8 +470,10 @@
         </p>
 
         <form class="backdrop-modal-form">
-          <div class="backdrop-modal-form-container-name-phone-email">
-            <label class="backdrop-fieldset-label" for="user-name">Name </label>
+          <div
+            class="backdrop-modal-form-container-name-phone-email backdrop-name"
+          >
+            <label class="backdrop-fieldset-label" for="user-name">Name</label>
             <div class="backdrop-div-container-svg">
               <input
                 type="text"
@@ -483,11 +486,12 @@
               </svg>
             </div>
           </div>
-          <div class="backdrop-modal-form-container-name-phone-email">
+          <div
+            class="backdrop-modal-form-container-name-phone-email backdrop-phone"
+          >
             <label class="backdrop-fieldset-label" for="user-name"
               >Phone
             </label>
-
             <div class="backdrop-div-container-svg">
               <input
                 type="tel"
@@ -500,7 +504,9 @@
               </svg>
             </div>
           </div>
-          <div class="backdrop-modal-form-container-name-phone-email">
+          <div
+            class="backdrop-modal-form-container-name-phone-email backdrop-email"
+          >
             <label class="backdrop-fieldset-label" for="user-name"
               >Email
             </label>
@@ -518,7 +524,7 @@
             </div>
           </div>
 
-          <div class="backdrop-modal-form-container-comment">
+          <div class="backdrop-modal-form-container-comment backdrop-commet">
             <label for="user-comment" class="backdrop-fieldset-label"
               >Comment
             </label>
@@ -551,8 +557,9 @@
                     href="./images/icons.svg#icon-checkbox-vector"
                     class="backdrop-privacy-policy-custom-checkbox-icon"
                   ></use>
-                </svg> </span
-              >I accept the terms and conditions of the
+                </svg>
+              </span>
+              I accept the terms and conditions of the
               <a href="/index.html" class="privacy-policy-link"
                 >Privacy Policy
               </a>
