@@ -1128,11 +1128,7 @@ ol {
     position: absolute;
 }
 
-.backdrop-privacy-policy { 
-    display: flex; 
-    align-items: center;                
-    width: 360px;
-    height: 16px;        
+.backdrop-privacy-policy {         
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.04em;
