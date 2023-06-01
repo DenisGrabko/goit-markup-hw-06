@@ -1139,8 +1139,8 @@ ol {
     color: #8e8f99;       
 }
 
-.backdrop-privacy-policy-custom-checkbox-container { 
-    display: inline-flex;    
+.backdrop-privacy-policy-custom-checkbox-container {     
+    display: inline-flex;
     width: 16px;
     height: 16px;
     border: 1px solid rgba(46, 47, 66, 0.4);
